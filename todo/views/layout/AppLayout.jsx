@@ -10,15 +10,19 @@ class AppLayout extends React.Component{
         {/* This let us dynamically create the title */}
             <title>{this.props.task}</title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="/css/style.css" />
         </head>
         <body>
-            <nav class="nav">
-                <a class="nav-link" href="/todo">Home</a>
-                <a class="nav-link" href="#">About</a>
+        <div className="container">
+          <h1 class='text-center'>My list of things to do</h1>
+            <nav class="nav nav-tabs">
+                <a class="nav-link" href="/todo">Todo list</a>
+                <a class="nav-link" href="/todo/new">New Task</a>
             </nav>
         <h1>{this.props.task}</h1>
        {/* This is where our other components will be injected */}
           {this.props.children}
+          </div>
         </body>
     </html>
     )
