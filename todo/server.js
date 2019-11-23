@@ -42,6 +42,19 @@ app.get('/todo/:id', (req,res)=> {
     });
 });
 // update
+app.get('/todo/:id/edit', (req, res) => {
+    Todo.findById(req.params.id, (err, foundTodo) => {
+        res.render('Edit', {
+            todo:foundTodo
+        });
+    })
+})
+// put
+app.put('/todo/:id', (req, res) => {
+    Todo.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
+        res.redirect('/todo');
+    });
+})
 // delete
 
 
