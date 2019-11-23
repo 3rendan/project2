@@ -41,6 +41,12 @@ app.get('/todo/:id', (req,res)=> {
         });
     });
 });
+// delete
+app.delete('/todo/:id', (req, res) => {
+    Todo.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/todo');
+    });
+});
 // update
 app.get('/todo/:id/edit', (req, res) => {
     Todo.findById(req.params.id, (err, foundTodo) => {
@@ -55,7 +61,7 @@ app.put('/todo/:id', (req, res) => {
         res.redirect('/todo');
     });
 })
-// delete
+
 
 
 
