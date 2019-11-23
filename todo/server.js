@@ -17,12 +17,23 @@ mongoose.connection.once('open', () => {
 
 // index view
 app.get('/todo', (req, res) =>{
-    res.send('hello');
+    Todo.find({}, (error,allTodo) => {
+        res.render('Index', {
+            todo: allTodo
+        });
+    });
 });
+// new
+app.get('/todo/new', (req,res) => {
+    res.render('New');
+})
 // create
-
+app.post('/todo/', (req,res) => {
+    Todo.create(req.body, (error, createdTodo)=>{
+        res.redirect('/todo');
+    });
+});
 // update
-
 // delete
 
 
