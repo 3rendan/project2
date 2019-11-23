@@ -33,6 +33,14 @@ app.post('/todo/', (req,res) => {
         res.redirect('/todo');
     });
 });
+// read
+app.get('/todo/:id', (req,res)=> {
+    Todo.findById(req.params.id, (err, foundTodo) => {
+        res.render('Show', {
+           todo:foundTodo
+        });
+    });
+});
 // update
 // delete
 
