@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:700|VT323|Walter+Turncoat&display=swap');
+* {
+    border:1px transparent solid;
+}
+body {
+    background-color: powderblue;
+    color: maroon;
+}
+.btn-new {
+    background-color: maroon;
+    color: ivory;
+}
+.nav {
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    text-transform: lowercase;
+    float: right;
+    color: navy;    
+}
+.text-center {
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+input {
+    background-color: navy;
+    color: ivory;
+    border: .5px maroon solid;
+    margin: 10px;
+    border-radius: 8px;
+}
+h2 {
+    font-size: 1.25em;
+    font-family: 'VT323', monospace;
+    margin: auto;
+}
+.tasks {
+    font-family: 'Walter Turncoat', cursive;
+    list-style-type: upper-roman;
+    font-size: 1.5em;
+}
+.tasks > a:hover {
+    color: maroon;
+    text-decoration: underline;
+}
