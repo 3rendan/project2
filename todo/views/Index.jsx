@@ -10,9 +10,9 @@ class Index extends React.Component{
                   return <li>
                       <a href={`/todo/${todo.id}`}>{todo.task} </a>  
                       <form action={`/todo/${todo._id}?_method=DELETE`} method="POST">
-                          <input class="btn btn-new m-2" type="submit" value="DELETE"/>
+                          <input className="btn btn-new m-2" type="submit" value="DELETE"/>
                       </form>
-                      <a class="btn" href={`/todo/${todo._id}/edit`}>Edit This Task</a>
+                      <a className="btn" href={`/todo/${todo._id}/edit`}>Edit This Task</a>
                   </li>
               })}
       </ul>

@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700|VT323|Walter+Turncoat&display=swap');
 * {
-    border:1px transparent solid;
+    border:1px transparent blue;
 }
 body {
-    background-color: powderblue;
+    background-image: url('/img/fabric.jpg');
     color: maroon;
+    height: 1500px;
+}
+.container {
+    background-image: url('/img/paper.jpg');
+    margin: 4em 3em 3em 3em;
+    padding-top: 30px;
+    border: 2.5px navajowhite solid;
 }
 .btn-new {
-    background-color: maroon;
-    color: ivory;
+    background-color: navajowhite;
+    color: navy;
+    font-weight: bold;
 }
 .nav {
     font-family: 'VT323', monospace;
@@ -18,8 +26,9 @@ body {
     color: navy;    
 }
 .text-center {
-    font-family: 'Space Mono', monospace;
+    font-family: 'VT323', monospace;
     text-transform: uppercase;
+    font-size: 3em;
 }
 input {
     background-color: navy;
@@ -28,6 +37,7 @@ input {
     margin: 10px;
     border-radius: 8px;
 }
+
 h2 {
     font-size: 1.25em;
     font-family: 'VT323', monospace;
