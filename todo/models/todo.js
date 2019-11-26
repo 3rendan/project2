@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 const TodoSchema = new mongoose.Schema({
-//   listName: String,
+//   listName: String, array of values that can be added to 
   task: {type: String, required:true},
   dueDate: {type: String, max: 5},
   priority: {type: String },
