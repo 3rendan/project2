@@ -14,7 +14,8 @@ class New extends React.Component {
                 <form action="/todo" method="POST">
                     Task: <input type="text" name="task" /><br/>
                     Due: <input type="date" name="dueDate" /><br/>
-                    Priority: <select name="priority">{choice}</select>
+                    Priority: <select name="priority" value={choice}>{choice}</select>
+                    List: <input type='string' name="list"/><br />
                     
                     {/* Priority: <select name="priority">
                     <option value="high">High</option>

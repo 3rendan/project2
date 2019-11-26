@@ -4,7 +4,7 @@ const AppLayout = require('./layout/AppLayout.jsx')
 class Edit extends React.Component{
   render() {
     return (
-      <div title="Edit Page">
+      <AppLayout title="Edit Page">
        {/* See the Layout takes in a prop called Title and we pass Edit Page to it */}
       <form action={`/todo/${this.props.todo._id}?_method=PUT`} method="POST">
             Task: <input type="text" name="task" /><br/>
@@ -13,7 +13,7 @@ class Edit extends React.Component{
             <input type="submit" name="" value="Edit Task"/>
           <input type="submit" value="Submit Changes"/>
       </form>
-      </div>
+      </AppLayout>
     )
   }
 }

@@ -12,6 +12,7 @@ body {
     margin: 4em 3em 3em 3em;
     padding-top: 30px;
     border: 2.5px navajowhite solid;
+    min-height: 750px;
 }
 .btn-new {
     background-color: navajowhite;
