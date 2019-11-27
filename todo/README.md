@@ -1,5 +1,7 @@
 <img src="http://digital.provath.org/uploads/screenshot1.png?v=3&s=200" title="Brendan Ryan" alt="To do app">
+
 # Todo Browser Extension
+  
   > Todo application to create quick tasks in a browser extension
 
   > The current project only presents a very basic functioning CRUD app.
