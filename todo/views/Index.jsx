@@ -5,16 +5,16 @@ class Index extends React.Component{
   render() {
     return (
       <AppLayout title="Todo List">
-      <ul className='tasks'>
+      <ul className='col-sm-12'>
       {/* order tasks by list and by priority and due date w/in lists */}
       {this.props.todo.map((todo,i) => {
-                  return <li>
-                      <a href={`/${todo.id}`}>{todo.task} </a> is due on <br />
-                      <span className="date-due">{todo.dueDate.toString()}</span>
+                  return <li className='list-group-item'>
+                      <a href={`/${todo.id}`}><h2>{todo.task}</h2> </a> is due on 
+                       <span><strong> {todo.dueDate}</strong></span> and is a {todo.priority} priority.
                       <form action={`/${todo._id}?_method=DELETE`} method="POST">
-                          <input className="btn confirmDelete" type="submit" value="DELETE"/>
+                          <input className="btn-danger" type="submit" value="DELETE"/>
                       </form>
-                      <a className="btn" href={`/${todo._id}/edit`}>Edit This Task</a>
+                      <a className="btn-outline-info" href={`/${todo._id}/edit`}>Edit This Task</a>
                   </li>
               })}
       </ul>
@@ -24,5 +24,3 @@ class Index extends React.Component{
   }
 }
 module.exports= Index;
-
-

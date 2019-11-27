@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Todo = require('./models/todo.js');
+const todoSeed = require('./models/seed.js')
 const methodOverride = require('method-override');
 
 app.set('view engine', 'jsx');
@@ -14,6 +15,10 @@ mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true,
 mongoose.connection.once('open', () => {
     console.log('connected to mongo')
 })
+// Todo.create(todoSeed, (err, data) => {
+//   if (err) console.log(err.message)
+//   console.log('added provided hotel data')
+// })
 
 // index view
 app.get('/', (req, res) =>{

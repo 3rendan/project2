@@ -13,7 +13,7 @@ class New extends React.Component {
                 <h2>New Task</h2>
                 <form action="/" method="POST">
                     Task: <input type="text" name="task" /><br/>
-                    Due: <input type="date" name="dueDate" /><br/>
+                    Due: <input type="text" name="dueDate" /><br/>
                     Priority: <select name="priority" value="priority">
                         <option value="high">High</option>
                         <option value="medium">Medium</option>

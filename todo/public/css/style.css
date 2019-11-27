@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700|VT323|Walter+Turncoat&display=swap');
 * {
-    border:1px transparent blue;
+    border:1px solid blue;
 }
 body {
     background-image: url('/img/fabric.jpg');

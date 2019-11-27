@@ -7,12 +7,12 @@ class Edit extends React.Component{
       <AppLayout title="Edit Page">     
       <form action={`/${this.props.todo._id}?_method=PUT`} method="POST">
             <label>Task:</label> <input type="text" name='task' defaultValue={this.props.todo.task}/><br/>
-            <label>Due:</label> <input type="date" name='dueDate'/><br/>
+            <label>Due:</label> <input type="text" name='dueDate' defaultValue={this.props.todo.dueDate} /><br/>
             <label>Priority:</label>
-              <select value='priority' name='priority' placeholder={this.props.todo.priority}>
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
+              <select value='priority' name='priority' defaultValue={this.props.todo.priority}>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
               </select>
           <input type="submit" value="Submit Changes"/>
       </form>
