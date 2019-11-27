@@ -5,8 +5,7 @@ class Index extends React.Component{
   render() {
     return (
       <AppLayout title="Todo List">
-      <ul className='col-sm-12'>
-      {/* order tasks by list and by priority and due date w/in lists */}
+      <ul>
       {this.props.todo.map((todo,i) => {
                   return <li className='list-group-item'>
                       <a href={`/${todo.id}`}><h2>{todo.task}</h2> </a> is due on 
