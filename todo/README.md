@@ -25,3 +25,5 @@
   ```
 
 ### Future development
+  - In Projects 3 and 4 I intend to build this out to make it a Firefox extension.
+  - The various compenents will be further modulated so that functionality is increased and the code is DRYer.
