@@ -3,11 +3,7 @@ const AppLayout = require('./layout/AppLayout.jsx');
 
 class New extends React.Component {
     render() {
-        const choice = ['high', 'low'];
-        const listItems = choice.map((choice) =>
-            <option value='{choice}'>{choice}</option>
-        );
-
+        
         return (
             <AppLayout>
                 <h2>New Task</h2>
@@ -19,7 +15,7 @@ class New extends React.Component {
                         <option value="medium">Medium</option>
                         <option value="low">Low</option>
                     </select>                   
-                    <input className='btn-new' type="submit" name="" value="Create Task"/>
+                    <input className='btn-new' type="submit" name="submit" value="Create Task"/>
                 </form>
             </AppLayout>
         )
