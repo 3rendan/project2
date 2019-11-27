@@ -1,6 +1,6 @@
 {
     "liveServer.settings.port": 4545,
-    "liveServer.settings.root": "/todo",
+    "liveServer.settings.root": "",
     "liveServer.settings.CustomBrowser" : "firefox",
     // "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
     "liveServer.settings.NoBrowser" : false,

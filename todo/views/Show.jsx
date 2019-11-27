@@ -3,7 +3,6 @@ const AppLayout = require('./layout/AppLayout.jsx')
 
 class Show extends React.Component {
     render(){
-        console.log(this.props.todo.dueDate.toString());
         return (
             <AppLayout title="Todo Item">
                 <h1>{ this.props.todo.task }</h1>

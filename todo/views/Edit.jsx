@@ -4,13 +4,16 @@ const AppLayout = require('./layout/AppLayout.jsx')
 class Edit extends React.Component{
   render() {
     return (
-      <AppLayout title="Edit Page">
-       {/* See the Layout takes in a prop called Title and we pass Edit Page to it */}
+      <AppLayout title="Edit Page">     
       <form action={`/${this.props.todo._id}?_method=PUT`} method="POST">
-            Task: <input type="text" name="task" /><br/>
-            Due: <input type="date" name="dueDate" /><br/>
-            Priority: <input type="text" name="priority" /><br/>
-            <input type="submit" name="" value="Edit Task"/>
+            <label>Task:</label> <input type="text" name='task' defaultValue={this.props.todo.task}/><br/>
+            <label>Due:</label> <input type="date" name='dueDate'/><br/>
+            <label>Priority:</label>
+              <select value='priority' name='priority' placeholder={this.props.todo.priority}>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
           <input type="submit" value="Submit Changes"/>
       </form>
       </AppLayout>

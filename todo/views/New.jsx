@@ -14,15 +14,11 @@ class New extends React.Component {
                 <form action="/" method="POST">
                     Task: <input type="text" name="task" /><br/>
                     Due: <input type="date" name="dueDate" /><br/>
-                    Priority: <select name="priority" value={choice}></select>
-                    List: <input type='string' name="list"/><br />
-                    
-                    {/* Priority: <select name="priority">
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                    </select> */}
-                    
+                    Priority: <select name="priority" value="priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>                   
                     <input className='btn-new' type="submit" name="" value="Create Task"/>
                 </form>
             </AppLayout>
