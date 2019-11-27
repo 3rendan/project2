@@ -1,4 +1,4 @@
-<img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="Brendan Ryan" alt="To do app">
+<img src="http://digital.provath.org/uploads/screenshot1.png?v=3&s=200" title="Brendan Ryan" alt="To do app">
 # Todo Browser Extension
   > Todo application to create quick tasks in a browser extension
 
