@@ -1,13 +1,22 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const db = mongoose.connection;
+mongoose.Promise = global.Promise;
+
+
+// Config
+const mongoURI = 'mongodb://localhost:4545/todo';
+// Models
 const Todo = require('./models/todo.js');
+const todoSeed = require('./models/seed.js');
 
 const methodOverride = require('method-override');
 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 app.use(express.static('public'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'));
@@ -16,7 +25,16 @@ mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true,
 mongoose.connection.once('open', () => {
     console.log('connected to mongo')
 })
+// Error / success
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: ', mongoURI));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
+// Todo.create(todoSeed, (err, data) => {
+//   if (err) console.log(err.message)
+//   console.log('added tasks')
+// })
+// Todo.collection.drop();
 // index view
 app.get('/todo', (req, res) =>{
     Todo.find({}, (error,allTodo) => {
@@ -62,7 +80,14 @@ app.put('/todo/:id', (req, res) => {
     Todo.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
         res.redirect('/todo');
     });
-})
+});
+// javascript actions
+// $(() => {
+//     $('#check').click(function () {
+//         const $done = $('.notDone');
+//         $done.toggleClass('done');       
+//     })
+// });
 
 
 

@@ -46,10 +46,21 @@ h2 {
 }
 .tasks {
     font-family: 'Walter Turncoat', cursive;
-    list-style-type: upper-roman;
+    list-style: none;
     font-size: 1.5em;
 }
 .tasks > a:hover {
     color: maroon;
     text-decoration: underline;
+    list-style: none;
+}
+.done {
+    text-decoration: line-through;
+}
+.date-due {
+    font-size: .25em;
+}
+.btn-x {
+    width: 1em;
+    height: 1em;
 }

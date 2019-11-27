@@ -3,10 +3,11 @@ const AppLayout = require('./layout/AppLayout.jsx')
 
 class Show extends React.Component {
     render(){
+        console.log(this.props.todo.dueDate.toString());
         return (
-            <AppLayout title="Todo List">
-                <h1>Task</h1>
-                { this.props.todo.task } is due { this.props.todo.dueDate }
+            <AppLayout title="Todo Item">
+                <h1>{ this.props.todo.task }</h1>
+                It is due {this.props.todo.dueDate.toString()} and it is on the { this.props.todo.list } list.
             </AppLayout>
         )
     }
