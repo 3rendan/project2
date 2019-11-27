@@ -11,7 +11,7 @@ class New extends React.Component {
         return (
             <AppLayout>
                 <h2>New Task</h2>
-                <form action="/todo" method="POST">
+                <form action="/" method="POST">
                     Task: <input type="text" name="task" /><br/>
                     Due: <input type="date" name="dueDate" /><br/>
                     Priority: <select name="priority" value={choice}></select>

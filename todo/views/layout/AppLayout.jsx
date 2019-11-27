@@ -29,8 +29,8 @@ class AppLayout extends React.Component{
         <div className="container">
           <h1 className='text-center'>to do</h1>
             <nav className="nav nav-tabs">
-                <a className="nav-link" href="/todo">Todo list</a>
-                <a className="nav-link" href="/todo/new">New Task</a>
+                <a className="nav-link" href="/">Todo list</a>
+                <a className="nav-link" href="/new">New Task</a>
             </nav>
         <h1>{this.props.task}</h1>
        {/* This is where our other components will be injected */}

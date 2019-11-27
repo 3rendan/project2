@@ -36,7 +36,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // })
 // Todo.collection.drop();
 // index view
-app.get('/todo', (req, res) =>{
+app.get('/', (req, res) =>{
     Todo.find({}, (error,allTodo) => {
         res.render('Index', {
             todo: allTodo
@@ -44,17 +44,17 @@ app.get('/todo', (req, res) =>{
     });
 });
 // new
-app.get('/todo/new', (req,res) => {
+app.get('/new', (req,res) => {
     res.render('New');
 })
 // create
-app.post('/todo/', (req,res) => {
+app.post('/', (req,res) => {
     Todo.create(req.body, (error, createdTodo)=>{
         res.redirect('/todo');
     });
 });
 // read
-app.get('/todo/:id', (req,res)=> {
+app.get('/:id', (req,res)=> {
     Todo.findById(req.params.id, (err, foundTodo) => {
         res.render('Show', {
            todo:foundTodo
@@ -62,13 +62,13 @@ app.get('/todo/:id', (req,res)=> {
     });
 });
 // delete
-app.delete('/todo/:id', (req, res) => {
+app.delete('/:id', (req, res) => {
     Todo.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/todo');
     });
 });
 // update
-app.get('/todo/:id/edit', (req, res) => {
+app.get('/:id/edit', (req, res) => {
     Todo.findById(req.params.id, (err, foundTodo) => {
         res.render('Edit', {
             todo:foundTodo
@@ -76,7 +76,7 @@ app.get('/todo/:id/edit', (req, res) => {
     })
 })
 // put
-app.put('/todo/:id', (req, res) => {
+app.put('/:id', (req, res) => {
     Todo.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
         res.redirect('/todo');
     });

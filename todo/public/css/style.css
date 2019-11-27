@@ -58,9 +58,15 @@ h2 {
     text-decoration: line-through;
 }
 .date-due {
-    font-size: .25em;
+    font-size: .5em;
 }
 .btn-x {
     width: 1em;
     height: 1em;
+}
+.confirmDelete {
+    visibility: hidden;
+}
+ul { 
+    list-style: none;
 }
